@@ -11,15 +11,15 @@
 
 ### Example Input
 
-acts
-ball
-cats
-dog
-elephant
-fish
-god
-hand
-scat
+acts  
+ball  
+cats  
+dog  
+elephant  
+fish  
+god  
+hand  
+scat  
 cast
 
 ## Output
@@ -33,15 +33,15 @@ cast
 
 ### Example Output
 
-2
-4
-acts
-cast
-cats
-scat
-2
-dog
-god
+2  
+4  
+acts  
+cast  
+cats  
+scat  
+2  
+dog  
+god  
 
 ## Approach
 
