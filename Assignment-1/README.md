@@ -25,10 +25,10 @@ cast
 ## Output
 
 * The output file must contain no.of anagrams and for each set, the no.of words in that set and the words themselves in alphabetical order.
-* For the above example input, the output is:
-    Line 1: number of anagram sets found
-    Line 2: number of anagrams in first set (K)
-    Line 3 to K+2: list of anagrams in first set, one word per line, in alphabetical order.
+* For the above example input, the output is:  
+    Line 1: number of anagram sets found  
+    Line 2: number of anagrams in first set (K)  
+    Line 3 to K+2: list of anagrams in first set, one word per line, in alphabetical order.  
     Repeat for next set etc. till all anagrams printed out
 
 ### Example Output
