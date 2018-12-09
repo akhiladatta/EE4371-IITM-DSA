@@ -1,5 +1,6 @@
 # Introduction to Data Structures and Algorithms (EE4371)
-This repo is a collection of the assignments and their solutions for the Introduction to Data Structures and Algorithms course in the Fall 2018 semester. 
+
+This repo is a collection of the assignments and their solutions for the Introduction to Data Structures and Algorithms course in the Fall 2018 semester.
 
 ## Assignments
 
