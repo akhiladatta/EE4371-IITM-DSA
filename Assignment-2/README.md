@@ -6,16 +6,16 @@ For example, the "infix" expression (2*(3 + 4) ) / 5 would be represented in RPN
 
 A more detailed explanation can be found online, for example from the Wikipedia article [here.](https://en.wikipedia.org/wiki/Reverse_Polish_notation) As seen in the article, evaluation is typically done using a "stack" which is one of the simplest non-trivial data structures.  
 
-For this assignment, you need to  implement a stack - either use classes in C++, or struct and functions in C - either one is acceptable, but you should provide your own implementation and not use someone else's code for this. read the input into the stack - it is probably best to store the operators and numbers as strings or char[] arrays, but you can use functions such "atoi" to convert a string to a number for evaluation. evaluate and print out the result using 4 digits after the decimal place: you can use "printf(".4f", x)" to get this behaviour.
+## Example
 
-Example:  
 Input:
 1 2 3 /  
 2 3 /  
 3 4 * /  
 1 2 4 + - 5 * 7 /  
 
-Output:
+## Output
+
 ERROR  
 0.6667  
 ERROR  
