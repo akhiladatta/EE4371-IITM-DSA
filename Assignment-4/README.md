@@ -43,3 +43,13 @@ Average active tasks over entire duration is computed here as :
 
 Assume number of tasks can be up to 1e6, min duration of a task is 1 (all durations and start times integers) and max duration of a task is 1000.
 Earliest possible start time is 0.
+
+## Approach
+
+1. The end of simulation time is obtained while reading input, by finding the maximum end time across all tasks.
+2. Two **min-heaps** are maintained - one with start times and the other with end times.
+3. The minimum value in the start time heap is compared with minimum value in end time heap. The smaller of the two is removed from the respective heap. This means that a new task has started or an ongoing task has finished, respectively.
+4. A variable which holds the number of active tasks is continually updated as elements are added or removed from either heap. This is used to obtain the maximum number of active tasks.
+5. Repeat the above step until the start heap is empty.
+6. Remove tasks from the end heap until it becomes empty.
+7. A running sum is maintained which at every iteration adds the product of the number of active tasks and the time for which they were active. The final sum, when divided by the total simulation time gives us the average no.of active tasks over the duration of simulation.

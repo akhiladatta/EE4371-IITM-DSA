@@ -20,3 +20,9 @@ ERROR
 0.6667  
 ERROR  
 -3.5714
+
+## Approach
+
+1. Expression is read and passed to the function.
+2. If the character is an operand, it is pushed into the stack.
+3. If the character is an operator, then the operation is performed on the two topmost elements of stack and the result is stored in the second element from top. The top element is then popped from stack.

@@ -5,9 +5,15 @@ This repo is a collection of the assignments and their solutions for the Introdu
 ## Assignments
 
 1. Finding anagrams from a large set of words
-2. Evaluation of reverse polish notation expressions
-3. Implementation of traversals in a Binary search tree
+2. Evaluation of Reverse Polish Notation expressions
+3. Implementation of traversals in a Binary Search Tree
 4. Event driven simulation
 5. Finding island capitals using graphs
-6. Clock tree routing
-7. Pre-emptive task scheduling
+6. Pre-emptive task scheduling
+7. Supply delivery optimization
+
+## Final Exam
+
+1. Tournament Scheduling
+2. Optimal city tour scheme
+3. Optimal investment strategy

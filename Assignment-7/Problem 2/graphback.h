@@ -6,20 +6,31 @@
 
 #include <fstream>
 #include <iostream>
+#include <vector>
 #include <stdlib.h>
 
 
 using namespace std;
 
+struct AdjNode{
+	int id;
+	double dist;
+	int flow ;
+    int C;
+    int rev;
+    int edge_id;
+};
 
 struct Node {
     double lat;
     double lon;
+	vector<AdjNode*> adj;
 };
 
 
 struct Edge {
     char type;
+	int capacity;
     unsigned long nodes[2];
     double distance;
 };
@@ -30,7 +41,8 @@ struct Graph {
     Node *nodes;
     unsigned long no_nodes;
     unsigned long no_edges;
-
+    int *level;
+    vector< Edge > *adj; 
 
     bool read_graph(const char *file_name) 
 	{
@@ -61,6 +73,17 @@ struct Graph {
 			file >> edges[i].nodes[1];
 			file >> edges[i].type;
 			file >> edges[i].distance;
+			switch (edges[i].type)
+			{
+				case 'p': edges[i].capacity = 100;
+						  break;
+				case 's': edges[i].capacity = 50;
+						  break;
+				case 't': edges[i].capacity = 20;
+						  break;
+				default: printf("Wrong type");
+						 break;
+			}
 		}
 		file.close();
     }

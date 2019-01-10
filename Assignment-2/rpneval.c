@@ -61,7 +61,7 @@ void rpneval(char **expstring, int size)
 		if (atof(expstring[i]) || *expstring[i] == '0')				// If atof of the character is True (is a float) and also when the character is '0' 
 		{
 			ct_operands++;
-			push(stack, atof(expstring[i]), &top);				// Push operand onto the stack.
+			push(stack, atof(expstring[i]), &top);					// Push operand onto the stack.
 		}
 		else
 		{
@@ -80,10 +80,10 @@ void rpneval(char **expstring, int size)
 // Main function
 int main()
 {
-	char *expression[MAX_LENGTH];					// Array to store input line
+	char *expression[MAX_LENGTH];									// Array to store input line
 	char buffer[256];
-	int wordctr;									// Count number of operands/operators in a line
-	while (fgets(buffer, 256, stdin))				// The stdin input is stored in buffer string
+	int wordctr;													// Count number of operands/operators in a line
+	while (fgets(buffer, 256, stdin))								// The stdin input is stored in buffer string
 	{
 		wordctr = 0;
 		// Splits a string using a null character when it hits one of the characters mentioned in the call.

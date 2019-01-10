@@ -7,9 +7,9 @@ CFLAGS=-I.
 #Dependencies, like header files
 DEPS = include/%.h
 #Object files to build and link to obtain target executable
-OBJ = q5.o
+OBJ = p2.o
 #Name of target executable
-TARGET = q5
+TARGET = p2
 
 #Creates object files
 %.o: %.c $(DEPS)
@@ -31,8 +31,8 @@ clean:
 
 #Test-runs the executable
 test: $(TARGET)
-	./$(TARGET) < test1.in > output.txt
+	./$(TARGET) < input.txt > output.txt
 
 archive: clean
-	@tar -czf ../EE16B002-dsa-submit.tgz -C .. `basename ${PWD}`
+	@tar -czf ../dsa-submit.tgz -C .. `basename ${PWD}`
 	@echo "Created the archive file ../dsa-submit.tgz.  Please submit to Moodle."

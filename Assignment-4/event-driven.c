@@ -2,7 +2,6 @@
 Author: Atul Balaji (EE16B002)
 Assignment 4: Event Driven Simulation
 Date: 22/09/2018
-Note: I have edited the Makefile to change the compiler to gcc from g++ and also chnage name of input and golden output txt files.
 */
 
 /*
@@ -10,6 +9,7 @@ Given an input file with number of tasks, start time and duration of each task,
 this program returns the time till all tasks complete, max. no.of active tasks at a given time and average no.of active tasks at any given time.
 This problem has been solved as a min-heap
 */
+
 #include "stdio.h"
 #include "stdlib.h"
 #define MAX_TASKS 1000000
@@ -78,6 +78,7 @@ int main()
             popmin(end_heap,end_heapsize--);
         }
     }
+    
 	// After start heap becomes empty, we will remove tasks from the end heap as they finish.
     while (end_heapsize > 0)
     {   

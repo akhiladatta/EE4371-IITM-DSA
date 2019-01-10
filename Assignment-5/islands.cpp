@@ -2,7 +2,6 @@
 Author: Atul Balaji (EE16B002)
 Assignment 5: Finding Island Capitals
 Date: 10/11/2018
-Reference for Floyd Warshall Algorithm: geeksforgeeks.org
 */
 
 #include<stdio.h>
@@ -131,7 +130,7 @@ int main()
         idx = 0;
         if (nodes[k].visited == 0)
             DFS(nodes[k],idx,id_arr);
-        if (idx >0)
+        if (idx > 0)
         {   
             // Floyd Warshall Algorithm
             for (int x1=0;x1<idx;x1++) 

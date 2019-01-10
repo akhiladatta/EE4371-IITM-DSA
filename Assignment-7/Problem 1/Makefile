@@ -7,9 +7,9 @@ CFLAGS=-I.
 #Dependencies, like header files
 DEPS = include/%.h
 #Object files to build and link to obtain target executable
-OBJ = q3.o
+OBJ = p1.o
 #Name of target executable
-TARGET = q3
+TARGET = p1
 
 #Creates object files
 %.o: %.c $(DEPS)
@@ -27,12 +27,12 @@ $(TARGET): $(OBJ)
 
 #Cleans all compilation output files
 clean:
-	rm -f *.o *~ $(TARGET) OUTPUT_Tournament.txt
+	rm -f *.o *~ $(TARGET) output.txt
 
 #Test-runs the executable
 test: $(TARGET)
-	./$(TARGET) < INPUT_Tournament.txt > OUTPUT_Tournament.txt
+	./$(TARGET) < input.txt > output.txt
+
 archive: clean
-	@read -p 'Roll No: ' r ; \
-	tar -czf ../dsa-submit-$$r.tgz -C .. `basename ${PWD}` ; \
-	echo "Created the archive file ../dsa-submit-$$r.tgz. Please submit to Moodle."
+	@tar -czf ../dsa-submit.tgz -C .. `basename ${PWD}`
+	@echo "Created the archive file ../dsa-submit.tgz."

@@ -31,6 +31,8 @@ clean:
 
 #Test-runs the executable
 test: $(TARGET)
-	./$(TARGET) < input.txt > output.txt
+	./$(TARGET) < test1.in > output.txt
 
-archive 
+archive: clean
+	@tar -czf ../EE16B002-dsa-submit.tgz -C .. `basename ${PWD}`
+	@echo "Created the archive file ../dsa-submit.tgz.  Please submit to Moodle."
