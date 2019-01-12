@@ -29,3 +29,9 @@ No player should be involved in more than one match per day. All players should 
 1 6  
 2 5  
 3 4
+
+## Approach
+
+1. In this question, we are asked to schedule a tournament between N teams, over (N-1) days, with N/2 games per day, such that a team can play exactly one game in a day. For this problem, I have used the principle of **Round Robin scheduling**.
+2. An array of N-1 elements is constructed, with elements 1 to N-1. This is used to plan the fixtures of the first day. The team 1 will play team N (not part of the array), team 2 will play team N-1 and so on.
+3. For the subsequent days, this array is rotated to the right. The team at the first index is paired with team N and for other teams, team `array[i]` is paired with `array[N-i-1]`.

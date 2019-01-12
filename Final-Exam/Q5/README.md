@@ -48,11 +48,11 @@ It1 It2 .... Itn
 0 10000  
 10900 0
 
-Explanation : Maximum possible return is possible if we invest in 2nd investment option for the 1st year and 1st investment option for the 2nd year.
+**Explanation**:  
+Maximum possible return is possible if we invest in 2nd investment option for the 1st year and 1st investment option for the 2nd year, 
+i.e ((10000*1.1)-100)*1.12 = 12208.
 
-i.e ((10000*1.1)-100)*1.12 = 12208
-
-Note : you need to output investment amount for each instrument(n) for year year as matrix above
+**Note**: you need to output investment amount for each instrument(n) for year year as matrix above
 
 A checker script is added in the folder, to check whether you have missed fee constraint while you invest in next years.
 
@@ -62,3 +62,10 @@ A checker script is added in the folder, to check whether you have missed fee co
 `./checker input.txt output1w.txt`---- invested 1100 in 2 year 2nd option instead of 1090(wrong output)  
 `./checker input.txt output2.txt`---- checking output2.txt(correct output)  
 `./checker input.txt output2w.txt`---- while changing investments in 2nd year, fee is not considered
+
+## Approach
+
+1. In this question, we are required to find the best investment strategy for the given parameters. For this, we make use of a dynamic programming approach to update the return table stepwise. A return table is maintained which will conatin the amounts in every instrument at each year.
+2. First, the amount in the first row is assigned as S for all the investment schemes. Using this, we calculate the return at the year end, for all years and which scheme in the previous year has led to this.
+3. After this, at the last year, we find the scheme which has yielded maximum return. This is selected and the return table is made zero for the other instruments in that row.
+4. Then, we backtrack to all previous years to find the index from which this has originated. Finally, we end up with a table having the optimal scheme, with one non zero amount in a row.

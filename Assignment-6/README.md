@@ -86,3 +86,12 @@ The first line is the number of tasks and the remaining lines are the parameters
 8   1   4
 
 --------------------------------------
+
+## Approach
+
+1. Maintain a structure for each task that contains the release time, duration, deadline and progress.
+2. Build a min-heap using the tasks ordered by release time.
+3. Start the simulation and keep it running as long as heapsize > 0. First execute the task with minimum release time.
+4. After that, make a list of the eligible tasks which can be executed at the current time (tasks with release time <= current time).
+5. To select from these eligible tasks, determine if any task has no slack (deadline - current time - (duration - progress)). If yes, execute it.
+6. Else, execute the task with earliest deadline.

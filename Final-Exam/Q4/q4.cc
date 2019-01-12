@@ -2,9 +2,7 @@
 Author: Atul Balaji (EE16B002)
 Date: 11-11-2018
 Q4: Finding shortest tour from map of TN
-Reference for Dijkstra's Algorithm Implementation based on adjacency list: GeeksforGeeks
 */
-
 
 /*
 In this question, we are required to find the shortest tour of a set of K cities in the Tamil Nadu roads dataset.

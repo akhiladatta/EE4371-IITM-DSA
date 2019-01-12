@@ -1,8 +1,6 @@
 /*
 Author: Atul Balaji (EE16B002)
 Date: 11-11-2018
-Question 3 - End Sem
-Reference for Round robin scheduling: Wikipeida page 
 */
 
 #include<stdio.h>
@@ -16,7 +14,7 @@ such that one team can play exactly one game in a day. For this problem, I have 
 An array (arr) of N-1 elements is constructed, with elements 1 to N-1. This is used to plan the fixtures of the first day. 
 The team 1 will play team N (not part of the array), team 2 will play team N-1 and so on.
 For the array for subsequent elements, this array is rotated to the right for every subsequent day.
-The team at the first index is paired with team N and for other teams, team arr[i] is paired with arr[N-i-1]
+The team at the first index is paired with team N and for other teams, team arr[i] is paired with arr[N-i-1].
 */
 
 // Function to rotate given array to the right once
